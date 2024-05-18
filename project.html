@@ -1,0 +1,585 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Heavenly</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <style>
+  .fa {
+  padding: 0px;
+  font-size: 39px;
+  width: 90px;
+  height:14px
+  margin: 5px 10x;
+}
+.fa:hover {
+  opacity: 0.7;
+}
+.fa-facebook {
+
+  color: #337ab7;
+}
+.fa-instagram {
+  
+  color:  deeppink;
+}
+.fa-twitter {
+  
+  color: skyblue;
+}
+.fa-bars {
+ color: black;
+}
+.block {
+  position: absolute;
+  background-color: #B2BC9B;
+  padding:17%;
+  right:8%;
+  bottom:0%;
+  padding-left:21%;
+}
+.block1 {
+  position: absolute;
+  background-color: white;
+  padding:12%;
+  right:11%;
+  bottom:9%;
+  padding-left:13%;
+}
+.block2 {
+  position: absolute;
+  padding-left:4%;
+
+}
+.block3{
+position: absolute;
+padding-bottom:0%;
+padding-top:0%;
+margin-top:10%;
+ background-color:#CAD1B6;
+padding-left:40%;
+padding-right:40%;
+background-position: 50% 25%
+
+}
+
+
+.container {
+  position: relative;
+ 
+}
+
+.animate {
+will-change: transform, opacity;
+animation-duration: 1500ms;
+animation-name: custom_in;
+
+
+}
+  @keyframes custom_in {
+  from {
+    opacity: 0;
+    transform: translateX(300px);	/* Start from 300px UP */
+	rotate: 180deg;
+	
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0); /* End at original position */
+	
+  }
+}
+
+
+.imgstyle{
+padding-top:7%;
+display: block;
+ width: 379px; 
+ height: 451px;
+cursor: zoom-in;
+
+}
+
+.zoom {
+  
+  transition: transform .2s; /* Animation */
+  
+  
+}
+
+.zoom:hover {
+  transform: scale(1.5); /* (150% zoom - Note: if the zoom is too large, it will go outside of the viewport) */
+}
+.dropdown {
+  position: relative;
+  display: inline-block;
+}
+
+.dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: #f1f1f1;
+  min-width: 160px;
+  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+  z-index: 1;
+}
+
+.dropdown-content a {
+  color: black;
+  padding: 12px 16px;
+  text-decoration: none;
+  display: block;
+}
+
+
+
+.dropdown:hover .dropdown-content {display: block;}
+
+input[type="email"],
+input[type="password"] 
+{
+    align-content: center;
+  width: 82%;
+  background-color: white;
+  color: rgb(168, 168, 163);
+  font-size: large;
+  border: none;
+  border-bottom: 2px solid #6B7E3C;
+ padding: 2%;
+  border-top-style: none;
+border-right-style: none;
+border-left-style: none;
+font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif ;
+}
+
+
+
+ textarea 
+{
+    
+  border: none;
+  width: 82%;
+  background-color: white;
+  color: rgb(168, 168, 163);
+  font-size: large;
+ padding: 2%;
+  border-bottom: 2px solid #6B7E3C;
+  border-top-style: none;
+border-right-style: none;
+border-left-style: none;
+font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif ;
+margin-bottom: 1% ;
+height: 25%;
+
+}
+
+.button
+ {
+align-content: center;
+font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif ;
+  width: 82%;
+  background-color:#6B7E3C;
+  color: beige;
+  font-size: large;
+ padding: 2%;
+  border: none;
+}
+
+
+
+
+.site-footer
+{
+margin-top:30%;
+  background-color:#26272b;
+  padding:25px 0 20px;
+  font-size:15px;
+  line-height:24px;
+  color:#737373;
+}
+
+
+.site-footer hr
+{
+  border-top-color:#bbb;
+  opacity:0.5
+}
+.site-footer hr.small
+{
+  margin:20px 0
+}
+.site-footer h6
+{
+  color:#fff;
+  font-size:16px;
+  text-transform:uppercase;
+  margin-top:5px;
+  letter-spacing:2px
+}
+.site-footer a
+{
+  color:#737373;
+}
+.site-footer a:hover
+{
+  color:#3366cc;
+  text-decoration:none;
+}
+.footer-links
+{
+  padding-left:0;
+  list-style:none
+}
+.footer-links li
+{
+  display:block
+}
+.footer-links a
+{
+  color:#737373
+}
+.footer-links a:active,.footer-links a:focus,.footer-links a:hover
+{
+  color:#3366cc;
+  text-decoration:none;
+}
+.footer-links.inline li
+{
+  display:inline-block
+}
+.site-footer .social-icons
+{
+  text-align:right
+}
+
+.site-footer .social-icons a {
+    width: 82px;
+    height: 39px;
+    line-height: 40px;
+    margin-left: 20px;
+    margin-right: -17px;
+    border-radius: 60%;
+    background-color: #33353d;
+}
+
+.copyright-text
+{
+  margin:0
+}
+@media (max-width:991px)
+{
+  .site-footer [class^=col-]
+  {
+    margin-bottom:30px
+  }
+}
+@media (max-width:767px)
+{
+  .site-footer
+  {
+    padding-bottom:0
+  }
+  .site-footer .copyright-text,.site-footer .social-icons
+  {
+    text-align:center
+  }
+}
+.social-icons
+{
+  padding-left:0;
+  margin-bottom:0;
+  list-style:none
+}
+.social-icons li
+{
+  display:inline-block;
+  margin-bottom:4px
+}
+.social-icons li.title
+{
+  margin-right:15px;
+  text-transform:uppercase;
+  color:#96a2b2;
+  font-weight:700;
+  font-size:13px
+}
+.social-icons a{
+  background-color:#eceeef;
+  color:#818a91;
+  font-size:16px;
+  display:inline-block;
+  line-height:44px;
+  width:44px;
+  height:44px;
+  text-align:center;
+  margin-right:8px;
+  border-radius:100%;
+  -webkit-transition:all .2s linear;
+  -o-transition:all .2s linear;
+  transition:all .2s linear
+}
+.social-icons a:active,.social-icons a:focus,.social-icons a:hover
+{
+  color:#fff;
+  background-color:#29aafe
+}
+.social-icons.size-sm a
+{
+  line-height:34px;
+  height:34px;
+  width:34px;
+  font-size:14px
+}
+.social-icons a.facebook:hover
+{
+  background-color:#3b5998
+}
+.social-icons a.twitter:hover
+{
+  background-color:#00aced
+}
+.social-icons a.linkedin:hover
+{
+  background-color:#007bb6
+}
+.social-icons a.dribbble:hover
+{
+  background-color:#ea4c89
+}
+@media (max-width:767px)
+{
+  .social-icons li.title
+  {
+    display:block;
+    margin-right:0;
+    font-weight:600
+  }
+}
+
+  </style>
+</head>
+<body>
+  
+<nav class="navbar ">
+  <div class="container-fluid">
+    <div class="navbar-header">
+      <h1 style="padding-left:10%;font-family:fantasy;">Heavenly</h1>
+    </div>
+    <ul class="nav navbar-nav" style="float:right;">
+	  <div class="dropdown">
+	   <li><a  href="#" id="drop"  class="fa fa-bars"></a></li>
+  <div class="dropdown-content">
+  <a href="project.html">Home</a>
+    <a href="index.html">Portfolio</a>
+	<a href="#">About</a>
+    <a href="contact.html" >Contact Us</a>
+  </div>
+</div>
+      <li><a href="https://m.facebook.com/login/" target=”_blank” class="fa fa-facebook" ></a></li>
+      <li><a href="https://www.instagram.com/accounts/login/" target=”_blank” class="fa fa-instagram"></a></li>
+      <li><a href="https://twitter.com/login" target=”_blank” class="fa fa-twitter"></a></li>
+    </ul>
+  </div>
+</nav>
+  
+<div class="container-fluid">
+  <img src="projectimg01.jpg" alt="dinning table" style="width:100%";>
+<div class="block animate ">
+<div class="block1 animate ">
+<h1>INTERIOR STUDIO</h1>
+<h1 style="font-size:7rem;white-space: nowrap;">Home is not a <br>place it's a feeling</h1>
+</div>
+  </div>
+  </div>
+  
+  <div class="image">
+  <div class="row ">
+  <div class="col-sm-6 animate ">
+  <img src="projectimg02.jpg" style="width:90%;margin:10%;margin-left:16%;">
+  </div>
+  <div class="col-sm-6 animate ">
+  <img src="do.png"  style="width:65%;height:100%;margin:9%;margin-left:25%;">
+  <div class="block2 animate ">
+  <img src="projectimg04.jpg" style="border-radius:50%;width:75%;margin-left:9%;margin-top:-70%;"> 
+  </div>
+  </div>
+  </div>
+  </div>
+  
+  
+  <div class="row ">
+  <div class="pic">
+  <div class="col-sm-3"  style="margin-left:8%;margin-top:2%;padding-bottom:2%;padding:2%;width:12%;height:30%;font-family:fantasy;background-color:#6A7C3E;">
+     <center>   <h1 >01</h1></center>
+  </div>
+  <div class="col-sm-9">
+  <h1 style="margin-top:4%;font-size:5rem;white-space: nowrap;padding-left:4%;color:black;">We can envision a new fresh look for your <br>apartment, house, office or practice.</h1>
+  </div>
+  </div>
+  </div>
+  
+  
+  <div class="row ">
+  <div class="col-sm-4 zoom">
+    <img style="margin-left:24%;" class="imgstyle" src="projectimg05.jpg"  > 
+  </div>
+  <div class="col-sm-4 zoom">
+ <img   style="margin-left:12%;" class="imgstyle" src="projectimg06.jpg" >  
+  </div>
+  <div class="col-sm-4 zoom">
+  <img style="margin-right:14%;" class="imgstyle" src="projectimg07.jpg" >  
+  </div>
+  </div>
+  
+   <center> <h1 style="margin-top:4%;font-size:5rem;white-space: nowrap;font-family:Arial;padding-left:4%;color:black;">Latest Projects</h1></center>
+	
+	
+	 <div class="row ">
+	 <div class="col-sm-6">
+	 <img style="margin-left:65%;height:200px;width:35%;" class="imgstyle" src="projectimg08.jpeg"  > 
+     <img style="margin-left:25%;width:75%;" class="imgstyle" src="projectimg09.jpeg"  > 
+	 </div>
+	 <div class="col-sm-6">
+	 <img style="margin-left:0%;width:80%;" class="imgstyle" src="projectimg10.jpg"  > 
+     <img style="margin-right:0%;height:4%;width:35%;" class="imgstyle" src="projectimg11.jpeg"  > 
+
+	 </div>
+	 </div>
+
+  
+  
+  <div class="row ">
+  <div class="pic">
+  <div class="col-sm-9">
+  <h1 style="margin-top:4%;font-size:5rem;font-family:Arial;white-space: nowrap;margin-left:14%;color:black;">We combine design classics, curated<br> pieces from international furniture<br> shows.</h1>
+  </div>
+  <div class="col-sm-3"  style="padding-left:17%;margin-top:2%;padding-bottom:2%;padding:3%;width:12%;height:30%;font-family:fantasy;background-color:#6A7C3E;">
+     <center>   <h1 >02</h1></center>
+  </div>
+  
+  </div>
+  </div>
+  
+  
+  
+  <div class="row ">
+  <div class="col-sm-4 zoom">
+    <img style="margin-left:29%;" class="imgstyle" src="projectimg12.jpg"  > 
+  </div>
+  <div class="col-sm-4 zoom">
+ <img   style="margin-left:15%;" class="imgstyle" src="projectimg13.jpg" >  
+  </div>
+  <div class="col-sm-4 zoom">
+  <img style="margin-right:18%;" class="imgstyle" src="projectimg14.jpg" >  
+  </div>
+  </div>
+  
+  
+  
+  
+
+	
+
+	<div  style=" background-color:#CAD1B6;height:38.5%;width:100.5%; margin-top: 40% ;">
+        </div>
+        <div>
+                <img style="width:38%;height:110%;margin-top:-28.5% ;margin-left: 45%; "  src="projectimg15.jpg">
+        </div> 
+<div style=" position: relative;">
+        <div class=" container" style=" box-shadow:  5px 5px 20px 0 rgba(0, 0, 0, 0.4);  height: 90%; width: 38.5%;  background-color:white;text-align: center; align-content: center; margin-top: -43.5%; margin-left: 15%;" >
+
+                <h2 style="font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; font-size: 50px; margin-top: 1%;">Contact Us</h2>
+            <form style="align-items: center;" action="/action_page.php">
+
+                <div class="form-group" style="align-content: center;">
+                    <input  type="email" class="form-control" id="email" placeholder="Enter email" name="email"><br>
+                    <input  type="password" class="form-control" id="pwd" placeholder="Enter password" name="pwd"><br>
+                    <textarea placeholder="Enter your message"   class="form-control"></textarea><br>
+                    <button type="submit" class="form-control button" class="btn btn-default"><b>Submit</b></button><br>
+                </div>
+
+            </form>
+        </div>
+        </div> 
+	
+	
+	
+	<footer class="site-footer" >
+      <div class="container">
+        <div class="row">
+          <div class="col-sm-12 col-md-6">
+            <h6>About</h6>
+            <p class="text-justify">Havenly is an online interior design company, intended to make it easy for homeowners and renters to connect with interior designers and decorate their home beautifully.</p>
+          </div>
+
+   <!--       <div class="col-xs-6 col-md-3">
+            <h6>Categories</h6>
+            <ul class="footer-links">
+              <li><a href="http://scanfcode.com/category/c-language/">C</a></li>
+              <li><a href="http://scanfcode.com/category/front-end-development/">UI Design</a></li>
+              <li><a href="http://scanfcode.com/category/back-end-development/">PHP</a></li>
+              <li><a href="http://scanfcode.com/category/java-programming-language/">Java</a></li>
+              <li><a href="http://scanfcode.com/category/android/">Android</a></li>
+              <li><a href="http://scanfcode.com/category/templates/">Templates</a></li>
+            </ul>
+          </div>   -->
+
+          <div class="col-xs-6 col-md-3">
+            <h6>Quick Links</h6>
+            <ul class="footer-links">
+			   <li><a href="project.html">Home</a></li>
+
+              <li><a href="http://scanfcode.com/about/">About Us</a></li>
+              <li><a href="contactform.html">Contact Us</a></li>
+              
+              <li><a href="http://scanfcode.com/privacy-policy/">Portfolio</a></li>
+             
+            </ul>
+          </div>
+        </div>
+        <hr>
+      </div>
+      <div class="container">
+        <div class="row">
+          <div class="col-md-8 col-sm-6 col-xs-12">
+            <p class="copyright-text">Copyright &copy; 2017 All Rights Reserved by 
+         <a href="#">Scanfcode</a>.
+            </p>
+          </div>
+
+          <div class="col-md-4 col-sm-6 col-xs-12">
+            <ul class="social-icons">
+              <li><a class="facebook" href="https://m.facebook.com/login/?locale=en_GB"><i class="fa fa-facebook"></i></a></li>
+              <li><a class="twitter" href="https://twitter.com/login"><i class="fa fa-twitter"></i></a></li>
+              <li><a class="dribbble" href="https://dribbble.com/tags/(login)"><i class="fa fa-dribbble"></i></a></li>
+              <li><a class="linkedin" href="https://www.linkedin.com/company/login"><i class="fa fa-linkedin"></i></a></li>   
+            </ul>
+          </div>
+        </div>
+      </div>
+</footer>
+	
+	
+  <script>
+  const elementsToAnimate = document.querySelectorAll('.image , .pic');
+
+  window.addEventListener('scroll', () => {
+    elementsToAnimate.forEach(element => {
+      const rect = element.getBoundingClientRect(); // Get element's position and dimensions
+      if (rect.top < window.innerHeight && rect.bottom > 0) { // Check if in viewport
+        element.classList.add('animate');
+      } else {
+        element.classList.remove('animate');
+      }
+    });
+  });
+  
+  
+  
+</script>
+</body>
+</html>

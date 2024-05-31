@@ -1,4 +1,4 @@
-(function() {
+;(function() {
 	'use strict';
 
 	var tinyslider = function() {
@@ -105,4 +105,4 @@ $("#submitbtn").click(function(event){
     });
     
     
-})(jQuery)
+})(jQuery);

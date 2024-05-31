@@ -16,6 +16,22 @@
 		<link href="css/tiny-slider.css" rel="stylesheet">
 		<link href="css/style.css" rel="stylesheet">
 		<title>Furi- Shop </title>
+
+		<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.9/angular.min.js"></script>
+		<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+		<script>
+			var app = angular.module('myApp', []);
+			app.controller('myCtrl', function($scope) {
+				$scope.chairs = {
+					chair01 : { designname : "Nordic Chair",designimage : "images/product-3.png" ,price : "$50.00", },
+					chair02 : { designname : "Nordic Chair",designimage : "images/product-1.png",price : "$60.00"  },
+					chair03 : { designname : "Kurzo Aero Chair",designimage :"images/product-2.png",price : "$78.00" },
+					chair04 : { designname : "Ergonomic Chair",designimage : "images/product-3.png",price : "$43.00"}
+					
+					
+				}
+			});
+			</script>
 	</head>
 
 	<body>
@@ -192,7 +208,23 @@ x
 		    </div>
 		</div>
 
+		<div ng-app="myApp" ng-controller="myCtrl" style="text-align:center; margin-top: -13%; color:#184131 ;">
 
+			<h style="color: black; font-size: x-large;">Select Your favorite Chair Design For Order :</h>
+			
+			<select ng-model="selectedChair" ng-options="y.designname for (x, y) in chairs">
+			</select>
+			
+			
+			
+			<h4><b>Design Name:</b> {{selectedChair.designname}}</h4>
+			<span><img ng-src="{{selectedChair.designimage}}"  style="width: auto; height: auto;"></span>
+			<h4><b>Design price:</b> {{selectedChair.price}}</h4>
+			
+			<br><br>
+			<h style="color: black; font-size: x-large; "> Thanks For Selecting Our Studio </h>
+			</div>
+			<br><br><br><br><br><br>
 		<!-- Start Footer Section -->
 		<footer class="footer-section">
 			<div class="container relative">

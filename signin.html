@@ -66,28 +66,26 @@
     </div>
     <br><br><br>
 <!-- End Hero Section -->
-<div style="text-align: center; color: #3b5d50; "ng-app="myApp" ng-controller="formCtrl">
-  <form novalidate>
-    First Name: 
+<div style="text-align: center; color: #3b5d50;  "ng-app="myApp" ng-controller="formCtrl">
+  <form novalidate >
+    <b>First Name: </b>
     <input type="text" ng-model="user.firstName"><br><br>
-    Last Name:
+     <b>Last Name:</b>
     <input type="text" ng-model="user.lastName"><br><br>
-    Email:
+<b>Email   :
     <input type="text" ng-model="user.Email"><br><br>
-    Password:
+<b>Password:</b>
     <input type="text" ng-model="user.Password"><br><br>
-    
-    <button  class="btn btn-secondary me-2">Reset </button>
-    <button> <a href="Home.html" class="btn btn-secondary me-2">Continue</a></button>
+    <button ng-click="reset()" class="btn btn-secondary me-2">Reset </button>
+    <button class="btn btn-secondary me-2">Continue</button>
   </form>
-  <p>form = {{user}}</p>
-  <p>master = {{master}}</p>
+  
 </div>
 
 <script>
 var app = angular.module('myApp', []);
 app.controller('formCtrl', function($scope) {
-    $scope.master = {firstName:"John", lastName:"Doe",Email:"abc@gmail.com",Password:"************"};
+   
     $scope.reset = function() {
         $scope.user = angular.copy($scope.master);
     };
@@ -95,7 +93,7 @@ app.controller('formCtrl', function($scope) {
 });
 </script>
 
-<br><br><br><br>
+<br><br>
 <!-- Start Footer Section -->
 <footer class="footer-section">
     <div class="container relative">

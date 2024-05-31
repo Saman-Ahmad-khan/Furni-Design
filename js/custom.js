@@ -92,7 +92,7 @@ $("#submitbtn").click(function(event){
             contentType: 'application/json',
             data: JSON.stringify(formData),
             success: function(response) {
-                $("#response").html("<div class='alert alert-success'>Hi!"+response.name+" On Your Request "+response.select1+" is reserved now</div>");
+                $("#response").html("<div class='alert alert-success'>Hi!"+response.name+" Ajax is used to diaplay form data</div>");
             },
             error: function(xhr, status, error) {
                 if (xhr.status == 404) {

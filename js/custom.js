@@ -71,3 +71,38 @@
 
 
 })()
+$("#submitbtn").click(function(event){
+        event.preventDefault(); // Prevent the default form submission
+    
+        var name = $("#fname").val();
+        var lastname = $("#lname").val();
+        var email = $("#email").val();
+        var message = $("#message").val();
+    
+        var formData = {
+            name: fname,
+            lastname: lname,
+            email: email,
+            message: message
+        };
+    
+        $.ajax({
+            url: 'https://jsonplaceholder.typicode.com/posts',
+            type: 'POST',
+            contentType: 'application/json',
+            data: JSON.stringify(formData),
+            success: function(response) {
+                $("#response").html("<div class='alert alert-success'>Hi!"+response.name+" On Your Request "+response.select1+" is reserved now</div>");
+            },
+            error: function(xhr, status, error) {
+                if (xhr.status == 404) {
+                    $("#response").html("<div class='alert alert-danger'>File not found</div>");
+                } else {
+                    $("#response").html("<div class='alert alert-danger'>An error occurred: " + error + "</div>");
+                }
+            }
+        });
+    });
+    
+    
+})(jQuery)

@@ -64,22 +64,21 @@
             </div>
         </div>
     </div>
+    <br><br><br>
 <!-- End Hero Section -->
-<div style="text-align: center;"ng-app="myApp" ng-controller="formCtrl">
+<div style="text-align: center; color: #3b5d50; "ng-app="myApp" ng-controller="formCtrl">
   <form novalidate>
-    First Name:<br>
-    <input type="text" ng-model="user.firstName"><br>
-    Last Name:<br>
-    <input type="text" ng-model="user.lastName">
-    <br><br>
-    Email:<br>
-    <input type="text" ng-model="user.Email">
-    <br><br>
-    Password:<br>
-    <input type="text" ng-model="user.Password">
-    <br><br>
-    <button ng-click="reset()">RESET</button>
-    <button ng-click="reset()">CONTINUE</button>
+    First Name: 
+    <input type="text" ng-model="user.firstName"><br><br>
+    Last Name:
+    <input type="text" ng-model="user.lastName"><br><br>
+    Email:
+    <input type="text" ng-model="user.Email"><br><br>
+    Password:
+    <input type="text" ng-model="user.Password"><br><br>
+    
+    <button  class="btn btn-secondary me-2">Reset </button>
+    <button> <a href="Home.html" class="btn btn-secondary me-2">Continue</a></button>
   </form>
   <p>form = {{user}}</p>
   <p>master = {{master}}</p>
@@ -95,6 +94,8 @@ app.controller('formCtrl', function($scope) {
     $scope.reset();
 });
 </script>
+
+<br><br><br><br>
 <!-- Start Footer Section -->
 <footer class="footer-section">
     <div class="container relative">

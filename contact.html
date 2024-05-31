@@ -16,9 +16,31 @@
 		<link href="css/tiny-slider.css" rel="stylesheet">
 		<link href="css/style.css" rel="stylesheet">
 		<title>Furni- Contact Us</title>
-	</head>
+		<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.9/angular.min.js"></script>
+<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.9/angular-animate.js"></script>
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+<script>
+    angular.module('myApp', ['ngAnimate']);
+  </script>
 
-	<body>
+	</head>
+	<style>
+		@keyframes myChange {
+      from {
+        height: 0;
+      }
+      to {
+        height: 100px;
+      }
+    }
+		
+	div.ng-enter {
+      animation: 0.5s myChange forwards;
+    }
+	
+		</style>
+
+	<body ng-app="myApp">
 
 		<!-- Start Header/Navigation -->
 		<nav class="custom-navbar navbar navbar navbar-expand-md navbar-dark bg-dark" arial-label="Furni navigation bar">
@@ -125,7 +147,11 @@
                   </div> <!-- /.service -->
                 </div>
               </div>
+			  If You wanna contact us click on it: <input type="checkbox" ng-model="myCheck">
 
+					<br><br><br><br>
+			  <div ng-show="myCheck">
+			  
               <form>
                 <div class="row">
                   <div class="col-6">
@@ -153,7 +179,7 @@
 
                 <button type="submit" class="btn btn-primary-hover-outline">Send Message</button>
               </form>
-
+			</div>
             </div>
 
           </div>
